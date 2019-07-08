@@ -1,0 +1,7 @@
+1.There issue with the driver management as the driver  may not correlate to the Chrome version person is using this can be taken care by 
+driver management system/dependency provided by bonigarcia and not need to explicitly provide platform detail.This also removes the need of keeping driver files in repository
+2. Driver setup is provided within the test and this is same for all test which causes issue that is updating drier detail in every test class
+and if other drivers are also required in this case segregating it into different package and calling driver using factory pattern
+3.WebDriver provided wait should be used instead of halting the execution of program using thread
+4.Locators are maintained within the test this makes it difficult to maintain thus segregating it and using page object pattern to maintain locators
+5.After test run driver instance is never closed this again creates issue with memory
